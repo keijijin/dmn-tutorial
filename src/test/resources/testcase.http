@@ -1,0 +1,40 @@
+
+POST http://localhost:8080/violationpoint
+Accept: application/json
+Content-Type: application/json
+
+{
+    "Alcohol": 0.20,
+    "OverSpeed": 25,
+    "FreeWay": false,
+    "AccidentType": "傷害事故",
+    "AfterEffect": false,
+    "DurationOfTherapy": 60,
+    "MainCause": true
+}
+
+###
+POST http://localhost:8080/cumulate
+Accept: application/json
+Content-Type: application/json
+
+{
+  "This Violation": {
+    "vDate": "2020-05-29",
+    "point": 3
+  },
+  "ViolationTable": [
+    {
+      "vDate": "2018-05-05",
+      "point": 1
+    },
+    {
+      "vDate": "2019-05-05",
+      "point": 2
+    },
+    {
+      "vDate": "2017-05-05",
+      "point": 3
+    }
+  ]
+}
